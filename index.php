@@ -1,0 +1,82 @@
+<?php
+session_start();
+include_once "library/inc.connection.php";
+include_once "library/inc.library.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tienda Online de Dito Corporation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda Online desarrollada por Dito Corporation">
+    <meta name="author" content="Dito_online">
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+	<link href="assets/css/docs.css" rel="stylesheet"/>
+      
+     
+
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+	<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="assets/ico/logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+					<a id="logoM" href="index.php"></a>
+                  <a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+					  <li class=""><a href="index.php">Inicio o<br/>comienzo</a></li>
+					  <li class=""><a href="?open=Barang-Produk">Nuestros <br/>Productos</a></li>
+					  <li class=""><a href="?open=About">Acerca de<br/> la web</a></li>
+					  <li class=""><a href="?open=Contact-Us">Contáctenos</a></li>
+                      <li class=""><a href="admin/index.php">Gestion de<br/>administración</a></li>
+					</ul>
+                     <form action="?open=BarangPencarian" method="POST" name="form1" class="navbar-search pull-left">
+                     <input name="txtKeyword" id="srchFld" type="text" size="30" placeholder="Buscar cualquier producto aqui" class="search-query span5"/> <input type="submit" name="btnCari" value="Buscar producto">
+                    </form>
+                   					    
+					<ul class="nav pull-right">
+					<?php include_once "inc.login_status.php"; ?>
+					
+					</ul>
+				
+                  </div>
+                </div>
+              </div>
+            </div>
+<div id="mainBody" class="container">
+<header id="header">
+<div class="row">
+<div class="span12">
+	<a id="logoM" href="index.php"><img src="assets/img/main_logo.png"></a>
+<div class="pull-right"> <br/>
+</div>
+</div>
+</div>
+<div class="clr"></div>
+</header>
+	<div class="row">
+	<?php include "sidebar.php"; ?>
+	<?php include_once "login.php"; ?>
+	</div>
+	<?php require "buka_file.php"; ?><br><br><br>
+		<?php require "footer.php"; ?>
+<script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'a8c9e38f-a5f5-46d6-9a1a-7a003d4be81d', f: true }); done = true; } }; })();</script>
+</body>
+</html>
